@@ -11,8 +11,8 @@ fix that, and both were validated on TWO different 24h windows:
 1. TRADE EARLIER. The 60-minute washout leg and the trend leg only need
    61 and 31 bars of history, so they arm at bar 61 instead of bar 121
    (the 120-minute leg still needs 121 bars). On this window that catches
-   the early drop: buy filled at $63,646.15, sold at +1.5% for +$11.88
-   net. On the previous window it also arms one extra early trend trade
+   the early drop: buy filled at $63,646.15 (bar 67), sold at $64,588.30
+   (bar 472) for +$13.99 net after all fees, slippage and impact. On the previous window it also arms one extra early trend trade
    (bar 107, -$2.18) — which change 2 removes.
 2. STRONGER TREND FILTER. The trend leg now needs a 30-minute return of
    >= +1.0% (was +0.8%) with EMA(8) above EMA(21). The +0.8% level fired
